@@ -1,0 +1,32 @@
+
+IWAD Verifier is a program by LichSoft Software which allows users who own
+various Doom Engine games to check their main data files (IWADs) to see if
+they have been modified or corrupted at some point.
+
+This utility uses the MD5 message digest algorithm and does a comparison via
+hash strings located in the hashes.ini file.
+
+== Platforms Supported ==
+
+The original versions of IWAD Verifier were written in Delphi, which wasn't
+very portable to other platforms. This new version uses wxWidgets and C++.
+It should support any platform wxWidgets supports.
+
+Currently, only Windows builds are shipped with this package, they are Unicode
+enabled by default.
+
+== Usage ==
+
+Under Windows, just run the executable (iwadverifier.exe), Click the Browse
+button and select the IWAD you wish to check. Press the Check button and
+view the results.
+
+== Other Information ==
+
+LichSoft Website: http://russell.slipgate.org
+LichSoft IRC:     irc://irc.oftc.net/lichsoft (only way to contact Russell)
+
+Please report any bugs you find to Russell on IRC, if you don't have an IRC 
+client, you can download a free one (X-Chat) at http://www.xchat.org
+
+IWAD Verifier is under the GNU GPL, See the COPYING file for more information.

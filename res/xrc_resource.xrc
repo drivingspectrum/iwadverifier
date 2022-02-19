@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxIcon" name="mainicon">mainicon.ico</object>
+	<object class="wxFrame" name="dlgmain">
+		<style>wxCAPTION|wxCLOSE_BOX|wxMINIMIZE_BOX|wxSYSTEM_MENU|wxTAB_TRAVERSAL</style>
+		<bg>#d4d0c8</bg>
+		<title>IWAD Verifier - by LichSoft Software</title>
+		<centered>1</centered>
+		<object class="wxFlexGridSizer">
+			<rows>2</rows>
+			<cols>1</cols>
+			<vgap>0</vgap>
+			<hgap>0</hgap>
+			<growablecols>0</growablecols>
+			<growablerows>0</growablerows>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Select IWAD File</label>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxFilePickerCtrl" name="wxID_FPWADFILE">
+							<value></value>
+							<message>Select IWAD File</message>
+							<wildcard>*.wad</wildcard>
+							<style>wxFLP_CHANGE_DIR|wxFLP_DEFAULT_STYLE|wxFLP_FILE_MUST_EXIST|wxFLP_OPEN|wxFLP_USE_TEXTCTRL</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="wxID_BUFILECHECK">
+									<label>_Check</label>
+									<default>0</default>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Result</label>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxSplitterWindow" name="m_splitter1">
+							<style>wxSP_3D</style>
+							<sashpos>250</sashpos>
+							<gravity>1</gravity>
+							<minsize>1</minsize>
+							<orientation>vertical</orientation>
+							<object class="wxPanel" name="m_panel2">
+								<style>wxTAB_TRAVERSAL</style>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER|wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText1">
+											<label>Game Name</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxCheckListBox" name="wxID_CLGAMENAME">
+											<style>wxLB_SORT</style>
+											<size>-1,300</size>
+											<content />
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="wxPanel" name="m_panel1">
+								<style>wxTAB_TRAVERSAL</style>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER|wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText2">
+											<label>Version</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER|wxBOTTOM|wxEXPAND|wxLEFT|wxTOP</flag>
+										<border>5</border>
+										<object class="wxCheckListBox" name="wxID_CLVERSION">
+											<style>wxLB_ALWAYS_SB|wxLB_SORT</style>
+											<size>100,300</size>
+											<content />
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText3">
+							<label>Note: Some IWADs from disk/patched versions of the games may report\nas not being correct, that doesn&apos;t mean the IWAD is bad (it may very well\nrun with intended sourceport!) it just means I have not got around to\nadding support for it yet.\n</label>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<label>Help and Links</label>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxHyperlinkCtrl" name="m_hyperlink2">
+							<label>IWAD Verifier Site</label>
+							<url>http://russell.slipgate.org/iwadverifier.php</url>
+							<style>wxHL_DEFAULT_STYLE</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxHyperlinkCtrl" name="m_hyperlink1">
+							<label>LichSoft Website</label>
+							<url>http://russell.slipgate.org</url>
+							<style>wxHL_DEFAULT_STYLE</style>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_BUABOUT">
+							<label>_About</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

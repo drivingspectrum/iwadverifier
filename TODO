@@ -1,0 +1,5 @@
+To do:
+
+* CheckListBoxes
+    - Somehow disable them, so the user can't check them. There is code but
+      it doesn't work the way it should, it will disable the scrollbars aswell.
